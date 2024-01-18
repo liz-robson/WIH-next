@@ -10,6 +10,9 @@ export default function Home() {
   const supabase = createServerComponentClient({ cookies: () => cookieStore })
 
   return (
-    <Login />
+    <div>
+    <p className="text-3xl font-bold">Women in Health network</p>
+    <Login/>
+    </div>
   )
 }
