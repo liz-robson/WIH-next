@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <div>
-    <p className="text-3xl font-bold">Women in Health network</p>
+    <p className="text-3xl font-bold">Pairing Tool</p>
     <Login/>
     </div>
   )
