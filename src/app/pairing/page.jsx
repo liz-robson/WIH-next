@@ -10,6 +10,7 @@ export default async function Pairing() {
     return (
         <div>
             <h1 className="bg-white f-white">Pairing</h1>
+            <pre>{JSON.stringify(pairing, null, 2)}</pre>
         </div>
     )
 }
