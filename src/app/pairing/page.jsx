@@ -1,22 +1,17 @@
 import supabase from '../../../utils/supabase';
 
-export async function getServerSideProps() {
-    const {data, error} = await supabase.from('pairing').select('*');
-    return {
-        props: {
-            data,
-            error
-        }
-    }
-}
+async function getData() {
+    const {data} = await supabase.from('pairing').select('*');
+    return {data}
+    };
 
-
-export default function Pairing( {data}) {
+export default async function Pairing() {
+    const {data} = await getData();
 
     return (
         <div>
             <h1 className="bg-white f-white">Pairing</h1>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+            <pre className="bg-white f-white">{JSON.stringify(data, null, 2)}</pre>
         </div>
     )
 }
