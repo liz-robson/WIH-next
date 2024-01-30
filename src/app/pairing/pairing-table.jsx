@@ -19,22 +19,23 @@ export default function PairingTable() {
     }
 
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>Person 1</th>
-                    <th>Person 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                {pairing.map((pairing) => (
-                <tr key={pairing.id}>
-                    <td>{pairing.person_1_id}</td>
-                    <td>{pairing.person_2_id}</td>
-                 </tr>
-                ))}
-            </tbody>
-        </table>
+        <h1>Pairing table</h1>
+        // <table>
+        //     <thead>
+        //         <tr>
+        //             <th>Person 1</th>
+        //             <th>Person 2</th>
+        //         </tr>
+        //     </thead>
+        //     <tbody>
+        //         {pairing.map((pairing) => (
+        //         <tr key={pairing.id}>
+        //             <td>{pairing.person_1_id}</td>
+        //             <td>{pairing.person_2_id}</td>
+        //          </tr>
+        //         ))}
+        //     </tbody>
+        // </table>
         )
 }
 
