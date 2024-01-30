@@ -1,7 +1,6 @@
 'use client'
 
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import { data } from 'autoprefixer';
 import { useEffect, useState } from 'react';
 
 export default function PairingTable() {
@@ -13,8 +12,10 @@ export default function PairingTable() {
     const { data: pairing, error } = supabase.from('pairing').select('person_1_id, person_2_id');
 
     if (pairing) {
-        setPerson1(data.person_1_id);
-        setPerson2(data.person_2_id);
+        setPerson1(pairing[0].person_1_id);
+        setPerson2(pairing[0].person_1_id);
+        console.log(person1);
+        console.log(person2);
     }
 
     return (
