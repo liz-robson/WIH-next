@@ -11,6 +11,8 @@ export default function PairingTable() {
 
     const { data: pairing, error } = supabase.from('pairing').select('person_1_id, person_2_id');
 
+    console.log(pairing)
+
     if (pairing) {
         setPerson1(pairing[0].person_1_id);
         setPerson2(pairing[0].person_1_id);

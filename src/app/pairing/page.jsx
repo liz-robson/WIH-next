@@ -5,8 +5,8 @@ import PairingTable from "./pairing-table";
 export default async function Pairing() {
     const cookieStore = cookies();
     const supabase = createServerComponentClient({ cookies: () => cookieStore });
-    const { data: pairing } = await supabase.from('pairing').select('*');
-    console.log(pairing);
+    const { data } = await supabase.from('pairing').select();
+    console.log(data);
 
     return (
         <div>
