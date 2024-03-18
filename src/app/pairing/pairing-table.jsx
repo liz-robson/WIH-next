@@ -17,24 +17,23 @@ export default function PairingTable( props ) {
 
     return ( 
         <>
-        <h1>Pairing table</h1>
-        <pre>{JSON.stringify(data, null, 2)}</pre>
-        {/* <table>
-            <thead>
+        {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
+        <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-gray-50">
                 <tr>
-                    <th>Person 1</th>
-                    <th>Person 2</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Person 1</th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Person 2</th>
                 </tr>
             </thead>
-            <tbody>
-                {pairing.map((pairing) => (
-                <tr key={pairing.id}>
-                    <td>{pairing.person_1_id}</td>
-                    <td>{pairing.person_2_id}</td>
+            <tbody className="bg-white divide-y divide-gray-200">
+                {data.map((pairing) => (
+                <tr key={pairing.id} className="hover:bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap">{pairing.person_1_id}</td>
+                    <td className="px-6 py-4 whitespace-nowrap">{pairing.person_2_id}</td>
                  </tr>
                 ))}
             </tbody>
-        </table> */}
+        </table>
         </>
 )
 }
